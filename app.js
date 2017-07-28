@@ -24,5 +24,6 @@ myApp.controller('MushroomHandler', function($scope, MushroomFactory){
             $scope.mushroomData = mushArr;
             console.log("mushroom data", $scope.mushroomData);
             $scope.mushroomSearch = "";
+            $scope.test = "test";
     });
 });

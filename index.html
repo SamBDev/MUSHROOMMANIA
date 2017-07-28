@@ -9,12 +9,12 @@
 
             <input type="text" ng-model = "mushroomSearch" placeholder="Badger badger badger badger">
             <div>
-                <input type="radio" ng-model="edible">
-                <input type="radio" ng-model="safe">
+                <input type="radio" name="dangerous" ng-model="safeOrNot" value="true">
+                <input type="radio" name="dangerous" ng-model="safeOrNot" value="false">
             </div>
 
             <ul>
-                <li ng-repeat="mushroom in mushroomData | filter: {description: mushroomSearch}">
+                <li ng-repeat="mushroom in mushroomData | filter: {description: mushroomSearch, edible: safeOrNot}">
                     <h3>{{mushroom.name}}</h3>
                     <p>{{mushroom.description}}</p>
                 </li>
